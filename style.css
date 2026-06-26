@@ -1,0 +1,358 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0f172a;
+    font-family:Segoe UI,sans-serif;
+    color:white;
+}
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    overflow:hidden;
+}
+
+.slide{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:0;
+
+    transition:opacity 1.5s ease;
+
+    background-size:cover;
+    background-position:center;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.slide:nth-child(1){
+    background-image:url("images/hero1.jpg");
+}
+
+.slide:nth-child(2){
+    background-image:url("images/hero2.jpg");;
+}
+
+.slide:nth-child(3){
+    background-image:url("images/hero3.jpg");
+}
+
+.hero-overlay{
+
+    position:relative;
+
+    z-index:10;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:rgba(0,0,0,.45);
+
+    color:white;
+}
+
+.hero-overlay h1{
+
+    font-size:90px;
+    margin-bottom:20px;
+}
+
+.hero-overlay p{
+
+    font-size:26px;
+    max-width:700px;
+}
+
+.grid{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:40px 20px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:20px;
+}
+
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    min-height:320px;
+
+    cursor:pointer;
+}
+
+.large{
+    min-height:500px;
+}
+
+.wide{
+    min-height:400px;
+}
+
+.card img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.card:hover img{
+    transform:scale(1.08);
+}
+
+.content{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.9),
+        rgba(0,0,0,.1)
+    );
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:25px;
+}
+
+.content span{
+    opacity:.7;
+}
+
+.content h2{
+    font-size:34px;
+    margin:10px 0;
+}
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(15,23,42,.75);
+
+    backdrop-filter:blur(8px);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:1000;
+}
+
+.modal-box{
+
+    width:800px;
+    max-width:90%;
+
+    background:#1e293b;
+
+    color:white;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    position:relative;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 25px 80px rgba(0,0,0,.45);
+
+    backdrop-filter:blur(15px);
+
+    animation:modalShow .35s ease;
+}
+
+.close{
+
+    position:absolute;
+
+    right:20px;
+    top:15px;
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    background:#334155;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.close:hover{
+
+    background:#06b6d4;
+
+    transform:rotate(90deg);
+}
+
+.modal-box h2{
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+    color:#06b6d4;
+}
+
+.stat-card{
+
+    background:#0f172a;
+
+    padding:25px;
+
+    border-radius:16px;
+
+    margin-top:15px;
+
+    border-left:4px solid #06b6d4;
+}
+
+.stat-card h3{
+
+    font-size:42px;
+
+    color:#06b6d4;
+
+    margin-bottom:10px;
+}
+
+.mission-footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    color: #fff;
+    padding: 80px 20px 40px;
+}
+
+.mission-footer h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.mission-text {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: #cccccc;
+    text-align: center;
+}
+
+.goals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.goal-item {
+    flex: 1 1 280px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.goal-item span {
+    color: #ff9800;
+    font-weight: bold;
+    font-size: 20px;
+    min-width: 30px;
+}
+
+.goal-item h3 {
+    margin: 0 0 8px 0;
+    color: #ffffff;
+}
+
+.goal-item p {
+    margin: 0;
+    color: #aaaaaa;
+}
+
+.mission-footer .footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .goal-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@keyframes modalShow{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}

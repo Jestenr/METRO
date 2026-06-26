@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Metro Agency</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header class="hero">
+
+    <div class="slide active"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+
+    <div class="hero-overlay">
+
+        <h1>METRO AGENCY</h1>
+
+       <div class="hero-info">
+
+    <div class="info-card">
+
+        <p>
+            Metro Agency — современное рекламное агентство,
+            специализирующееся на брендинге, веб-дизайне,
+            цифровом маркетинге и продвижении бизнеса.
+            Создаем бренды,
+            сайты и рекламные кампании,
+            которые приносят результат.
+        </p>
+    </div>
+
+</div>
+
+    </div>
+
+</header>
+
+<section class="grid">
+
+    <div class="card large"
+         onclick="openModal('branding')">
+
+        <img src="images/branding.jpg" alt="">
+
+        <div class="content">
+            <span>01</span>
+            <h2>Брендинг</h2>
+            <p>Айдентика и позиционирование</p>
+        </div>
+
+    </div>
+
+    <div class="card"
+         onclick="openModal('web')">
+
+        <img src="images/webdesign.jpg" alt="">
+
+        <div class="content">
+            <span>02</span>
+            <h2>Веб-дизайн</h2>
+            <p>Современные сайты</p>
+        </div>
+
+    </div>
+
+    <div class="card"
+         onclick="openModal('marketing')">
+
+       <img src="images/marketing.jpg" alt="">
+
+        <div class="content">
+            <span>03</span>
+            <h2>Маркетинг</h2>
+            <p>Реклама и аналитика</p>
+        </div>
+
+    </div>
+
+    <div class="card"
+         onclick="openModal('smm')">
+
+       <img src="images/smm.jpg" alt="">
+
+        <div class="content">
+            <span>04</span>
+            <h2>SMM</h2>
+            <p>Продвижение в соцсетях</p>
+        </div>
+
+    </div>
+
+    <div class="card wide"
+         onclick="openModal('portfolio')">
+
+        <img src="images/portfolio.jpg" alt="">
+
+        <div class="content">
+            <span>05</span>
+            <h2>Наши кейсы</h2>
+            <p>Посмотреть проекты</p>
+        </div>
+
+    </div>
+
+    <div class="card"
+         onclick="openModal('contacts')">
+
+        <img src="images/contact.jpg" alt="">
+
+        <div class="content">
+            <span>06</span>
+            <h2>Контакты</h2>
+            <p>Связаться с нами</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="modal" id="branding">
+    <div class="modal-box">
+        <span class="close" onclick="closeModal('branding')">&times;</span>
+        <h2>Брендинг</h2>
+        <p>Создаем фирменный стиль, логотипы и визуальную систему бренда.</p>
+    </div>
+</div>
+
+<div class="modal" id="web">
+    <div class="modal-box">
+        <span class="close" onclick="closeModal('web')">&times;</span>
+        <h2>Веб-дизайн</h2>
+        <p>Разработка современных сайтов и посадочных страниц.</p>
+    </div>
+</div>
+
+<div class="modal" id="marketing">
+    <div class="modal-box">
+        <span class="close" onclick="closeModal('marketing')">&times;</span>
+        <h2>Маркетинг</h2>
+        <p>Комплексные рекламные кампании и стратегия роста.</p>
+    </div>
+</div>
+
+<div class="modal" id="smm">
+    <div class="modal-box">
+        <span class="close" onclick="closeModal('smm')">&times;</span>
+        <h2>SMM</h2>
+        <p>Продвижение бренда в социальных сетях, такие как: VK, Instagram, Telegram и тд.</p>
+    </div>
+</div>
+
+<div class="modal" id="portfolio">
+
+    <div class="modal-box">
+
+        <span class="close"
+              onclick="closeModal('portfolio')">
+            &times;
+        </span>
+
+        <div>
+            <h3>7+</h3>
+            <p>лет опыта</p>
+        </div>
+
+        <div>
+            <h3>50+</h3>
+            <p>брендов запущено</p>
+        </div>
+
+        <div>
+            <h3>12</h3>
+            <p>отраслей бизнеса</p>
+        </div>
+
+    </div>
+
+</div>  
+
+
+
+<div class="modal" id="contacts">
+
+    <div class="modal-box">
+
+        <span class="close"
+              onclick="closeModal('contacts')">
+            &times;
+        </span>
+
+        <h2>Контакты</h2>
+
+        <p>Телефон: +7 (495) 797-27-27</p>
+
+        <p>Email: info@metroagency.lt</p>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+
+<footer class="mission-footer">
+    <div class="container">
+        <h2>Наша миссия</h2>
+        <p class="mission-text">
+            Мы верим, что хороший дизайн и умный маркетинг способны менять восприятие и поведение людей. Наша задача — не просто «сделать красиво», а помочь бизнесу говорить на одном языке со своей аудиторией, быть понятными, нужными и запоминающимися.
+        </p>
+        <div class="goals">
+            <div class="goal-item">
+                <span>01</span>
+                <div>
+                    <h3>Понятность</h3>
+                    <p>Делаем сложное простым, а важное — заметным.</p>
+                </div>
+            </div>
+            <div class="goal-item">
+                <span>02</span>
+                <div>
+                    <h3>Эффективность</h3>
+                    <p>Каждый проект должен приносить измеримый результат.</p>
+                </div>
+            </div>
+            <div class="goal-item">
+                <span>03</span>
+                <div>
+                    <h3>Доверие</h3>
+                    <p>Строим отношения, основанные на прозрачности и честности.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Metro Agency. Создаём будущее вместе.</p>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
